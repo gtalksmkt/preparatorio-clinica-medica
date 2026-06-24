@@ -1,0 +1,1170 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Clínica Médica — Preparatório | Clinic Talks</title>
+  <meta name="description" content="Preparatório definitivo para a prova de Clínica Médica. +70 aulas, banco de questões, 4 simulados e aulas ao vivo com especialistas do Grupo Talks.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,700;0,9..40,800;0,9..40,900&display=swap" rel="stylesheet">
+
+  <style>
+  /* ═══════════════════════════════════════════════════════════
+     RESET & TOKENS
+  ═══════════════════════════════════════════════════════════ */
+  *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+  :root {
+    --black:      #040405;
+    --graphite:   #16161a;
+    --white:      #F6F6F7;
+    --gray-light: #C5C6CC;
+    --gray-mid:   #8E9098;
+    --yellow:     #F5EE16;
+    --y-dim:      rgba(245,238,22,.12);
+    --y-glow:     rgba(245,238,22,.35);
+    --font:       'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+    --radius:     22px;
+    --glass-bg:     linear-gradient(135deg, rgba(255,255,255,.085), rgba(255,255,255,.022));
+    --glass-bd:     rgba(255,255,255,.14);
+    --glass-blur:   blur(22px) saturate(150%);
+    --glass-shadow: 0 18px 50px rgba(0,0,0,.5),
+                    inset 0 1px 0 rgba(255,255,255,.2),
+                    inset 0 -1px 1px rgba(0,0,0,.35);
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--black);
+    color: var(--white);
+    font-family: var(--font);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.55;
+    overflow-x: hidden;
+  }
+
+  h1 { font-weight: 900; letter-spacing: -1px;  line-height: 1.0; }
+  h2 { font-weight: 800; letter-spacing: -.5px; line-height: 1.15; }
+  h3 { font-weight: 800; letter-spacing: -.3px; }
+  h4 { font-weight: 700; }
+  a  { text-decoration: none; }
+
+  .yl  { color: var(--yellow); }
+  .wh  { color: var(--white); }
+
+  /* ═══════════════════════════════════════════════════════════
+     LAYOUT
+  ═══════════════════════════════════════════════════════════ */
+  .wrap  { max-width: 1160px; margin: 0 auto; padding: 0 24px; }
+  .sec   { padding: 100px 24px; }
+  .divider {
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--glass-bd), transparent);
+  }
+
+  /* ═══════════════════════════════════════════════════════════
+     GLASS SURFACE
+  ═══════════════════════════════════════════════════════════ */
+  .glass {
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-bd);
+    backdrop-filter: var(--glass-blur);
+    -webkit-backdrop-filter: var(--glass-blur);
+    box-shadow: var(--glass-shadow);
+    border-radius: var(--radius);
+  }
+
+  /* ═══════════════════════════════════════════════════════════
+     BUTTONS
+  ═══════════════════════════════════════════════════════════ */
+  .btn {
+    display: inline-flex; align-items: center; justify-content: center;
+    gap: 10px; padding: 18px 44px;
+    font-family: var(--font); font-weight: 700; font-size: 16px;
+    border-radius: 999px; border: none; cursor: pointer;
+    transition: transform .2s, box-shadow .2s;
+    white-space: nowrap;
+  }
+  .btn-primary {
+    background: var(--yellow);
+    color: #040405;
+    box-shadow: 0 0 26px var(--y-glow), 0 4px 20px rgba(0,0,0,.4);
+  }
+  .btn-primary:hover {
+    transform: translateY(-3px) scale(1.02);
+    box-shadow: 0 0 44px rgba(245,238,22,.55), 0 8px 32px rgba(0,0,0,.5);
+  }
+  .btn-ghost {
+    background: transparent; color: var(--white);
+    border: 1px solid rgba(255,255,255,.22);
+    padding: 14px 28px; font-size: 14px; font-weight: 500;
+  }
+  .btn-ghost:hover { border-color: var(--yellow); background: var(--y-dim); }
+
+  /* ═══════════════════════════════════════════════════════════
+     SECTION EYEBROW
+  ═══════════════════════════════════════════════════════════ */
+  .eyebrow {
+    display: flex; align-items: center; gap: 10px;
+    font-size: 11px; font-weight: 700; letter-spacing: 1.8px;
+    text-transform: uppercase; color: var(--yellow);
+    margin-bottom: 14px;
+  }
+  .eyebrow::before {
+    content: ''; display: block;
+    width: 22px; height: 2px;
+    background: var(--yellow); border-radius: 2px;
+  }
+  .eyebrow-center { justify-content: center; }
+
+  .sec-title {
+    font-size: clamp(28px, 4vw, 44px);
+    color: var(--white); margin-bottom: 14px;
+  }
+  .sec-sub {
+    font-size: 17px; color: var(--gray-light);
+    line-height: 1.65; max-width: 560px;
+  }
+
+  /* ═══════════════════════════════════════════════════════════
+     SCROLL REVEAL
+  ═══════════════════════════════════════════════════════════ */
+  [data-reveal] {
+    opacity: 0; transform: translateY(28px);
+    transition: opacity .65s ease, transform .65s ease;
+  }
+  [data-reveal].on { opacity: 1; transform: none; }
+  [data-d="1"] { transition-delay: .10s; }
+  [data-d="2"] { transition-delay: .20s; }
+  [data-d="3"] { transition-delay: .30s; }
+  [data-d="4"] { transition-delay: .40s; }
+  [data-d="5"] { transition-delay: .50s; }
+  [data-d="6"] { transition-delay: .60s; }
+
+  /* ═══════════════════════════════════════════════════════════
+     NAVBAR
+  ═══════════════════════════════════════════════════════════ */
+  #nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 200;
+    padding: 18px 24px;
+    transition: background .3s, backdrop-filter .3s;
+  }
+  #nav.stuck {
+    background: rgba(4,4,5,.88);
+    backdrop-filter: blur(24px); -webkit-backdrop-filter: blur(24px);
+    border-bottom: 1px solid var(--glass-bd);
+  }
+  .nav-row {
+    max-width: 1160px; margin: 0 auto;
+    display: flex; align-items: center; justify-content: space-between; gap: 24px;
+  }
+  .brand {
+    display: flex; align-items: center; gap: 10px;
+    font-size: 15px; font-weight: 800; letter-spacing: -.2px;
+    color: var(--white);
+  }
+  .brand-dot {
+    width: 10px; height: 10px; border-radius: 50%;
+    background: var(--yellow);
+    box-shadow: 0 0 12px var(--y-glow);
+  }
+  .brand em { color: var(--yellow); font-style: normal; }
+  .nav-right { display: flex; align-items: center; gap: 20px; }
+  .nav-wpp {
+    display: flex; align-items: center; gap: 8px;
+    font-size: 13px; font-weight: 500; color: var(--gray-light);
+  }
+  .wpp-dot {
+    width: 8px; height: 8px; border-radius: 50%; background: #25D366;
+    animation: pulse-g 2.2s infinite;
+  }
+  @keyframes pulse-g {
+    0%,100% { box-shadow: 0 0 0 0 rgba(37,211,102,.5); }
+    60%      { box-shadow: 0 0 0 7px rgba(37,211,102,0); }
+  }
+
+  /* ═══════════════════════════════════════════════════════════
+     HERO
+  ═══════════════════════════════════════════════════════════ */
+  #hero {
+    min-height: 100vh;
+    display: flex; align-items: center;
+    padding: 130px 24px 80px;
+    position: relative; overflow: hidden;
+  }
+
+  /* grid bg */
+  #hero::before {
+    content: '';
+    position: absolute; inset: 0;
+    background-image:
+      linear-gradient(rgba(255,255,255,.028) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255,255,255,.028) 1px, transparent 1px);
+    background-size: 64px 64px;
+    pointer-events: none;
+  }
+  /* yellow ambient glow top */
+  #hero::after {
+    content: '';
+    position: absolute; top: -120px; left: 50%; transform: translateX(-50%);
+    width: 900px; height: 500px;
+    background: radial-gradient(ellipse, rgba(245,238,22,.09) 0%, transparent 68%);
+    pointer-events: none;
+  }
+
+  .hero-in {
+    max-width: 1160px; margin: 0 auto;
+    display: grid; grid-template-columns: 1fr 1fr;
+    gap: 60px; align-items: center;
+    position: relative; z-index: 1;
+  }
+
+  /* LEFT */
+  .hero-badge {
+    display: inline-flex; align-items: center; gap: 8px;
+    padding: 6px 16px; border-radius: 999px;
+    border: 1px solid rgba(245,238,22,.28);
+    background: rgba(245,238,22,.08);
+    font-size: 12px; font-weight: 700; letter-spacing: .8px;
+    text-transform: uppercase; color: var(--yellow);
+    margin-bottom: 28px;
+  }
+  .hero-badge-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--yellow); }
+
+  .hero-title {
+    font-size: clamp(38px, 5vw, 64px);
+    margin-bottom: 4px; color: var(--white);
+  }
+  .hero-title-pre {
+    font-size: clamp(15px, 1.6vw, 19px); font-weight: 400;
+    color: var(--gray-mid); letter-spacing: 0;
+    margin-bottom: 8px; display: block;
+  }
+  .hero-title-main {
+    display: block; font-size: clamp(52px, 7.5vw, 96px);
+    font-weight: 900; letter-spacing: -2px; line-height: .95;
+    color: var(--yellow);
+    text-shadow: 0 0 80px rgba(245,238,22,.25);
+  }
+
+  .hero-desc {
+    font-size: 18px; color: var(--gray-light);
+    line-height: 1.65; max-width: 460px;
+    margin: 28px 0 44px;
+  }
+  .hero-desc strong { color: var(--white); font-weight: 600; }
+
+  .hero-ctas { display: flex; align-items: center; gap: 16px; flex-wrap: wrap; margin-bottom: 52px; }
+
+  /* stats row */
+  .hero-stats { display: flex; gap: 0; }
+  .h-stat {
+    padding: 0 28px;
+    border-right: 1px solid var(--glass-bd);
+  }
+  .h-stat:first-child { padding-left: 0; }
+  .h-stat:last-child  { border-right: none; }
+  .h-stat-n {
+    font-size: 30px; font-weight: 900;
+    color: var(--yellow); letter-spacing: -1px; line-height: 1;
+  }
+  .h-stat-l {
+    font-size: 12px; color: var(--gray-mid); font-weight: 500; margin-top: 3px;
+  }
+
+  /* RIGHT — photo side */
+  .hero-visual { position: relative; }
+
+  .photo-wrap {
+    position: relative;
+    border-radius: var(--radius);
+    overflow: hidden;
+    box-shadow: 0 40px 80px rgba(0,0,0,.55),
+                0 0 0 1px var(--glass-bd),
+                0 0 80px rgba(245,238,22,.07);
+  }
+  .photo-wrap img {
+    width: 100%; display: block;
+    aspect-ratio: 3/4; object-fit: cover;
+  }
+  /* placeholder when no img */
+  .photo-ph {
+    width: 100%; aspect-ratio: 3/4;
+    background: linear-gradient(160deg, #16161a 0%, #0d0d10 100%);
+    display: flex; flex-direction: column;
+    align-items: center; justify-content: center;
+    gap: 16px; color: var(--gray-mid);
+  }
+  .photo-ph-icon {
+    width: 72px; height: 72px; border-radius: 50%;
+    background: var(--glass-bg); border: 1px solid var(--glass-bd);
+    display: flex; align-items: center; justify-content: center; font-size: 32px;
+  }
+  .photo-ph p { font-size: 13px; text-align: center; max-width: 160px; }
+
+  /* yellow bottom glow behind photo */
+  .photo-glow {
+    position: absolute; bottom: -60px; left: 50%; transform: translateX(-50%);
+    width: 320px; height: 320px;
+    background: radial-gradient(circle, rgba(245,238,22,.18) 0%, transparent 70%);
+    pointer-events: none; z-index: -1;
+  }
+
+  /* floating stat cards */
+  .flt {
+    position: absolute;
+    padding: 14px 20px; border-radius: 16px;
+    background: rgba(16,16,20,.9); border: 1px solid var(--glass-bd);
+    backdrop-filter: blur(18px); -webkit-backdrop-filter: blur(18px);
+    box-shadow: 0 12px 40px rgba(0,0,0,.45);
+  }
+  .flt-label { font-size: 11px; color: var(--gray-mid); font-weight: 500; }
+  .flt-val   { font-size: 22px; font-weight: 900; color: var(--white); letter-spacing: -.5px; line-height: 1.1; }
+  .flt-sub   { font-size: 11px; color: var(--gray-light); }
+  .flt-1 { bottom: 28px; left: -36px; }
+  .flt-2 { top:    36px; right: -28px; }
+  .flt-yl { color: var(--yellow) !important; }
+
+  /* ═══════════════════════════════════════════════════════════
+     TAGLINE BAR
+  ═══════════════════════════════════════════════════════════ */
+  #tagline {
+    padding: 30px 24px;
+    background: linear-gradient(90deg, rgba(245,238,22,.05), rgba(245,238,22,.10), rgba(245,238,22,.05));
+    border-top:    1px solid rgba(245,238,22,.18);
+    border-bottom: 1px solid rgba(245,238,22,.18);
+    text-align: center;
+  }
+  .tagline-txt {
+    font-size: clamp(14px, 2.2vw, 20px); font-weight: 700;
+    color: var(--white); letter-spacing: -.2px;
+  }
+  .tagline-txt em { color: var(--yellow); font-style: normal; }
+
+  /* ═══════════════════════════════════════════════════════════
+     VIDEO
+  ═══════════════════════════════════════════════════════════ */
+  #video { padding: 88px 24px; }
+  .video-max { max-width: 860px; margin: 0 auto; }
+  .video-hd  { text-align: center; margin-bottom: 40px; }
+  .video-frame {
+    border-radius: var(--radius); overflow: hidden;
+    box-shadow: 0 40px 80px rgba(0,0,0,.6),
+                0 0 0 1px var(--glass-bd),
+                0 0 60px rgba(245,238,22,.07);
+  }
+  .video-frame iframe { width: 100%; aspect-ratio: 16/9; display: block; border: none; }
+  .video-ph {
+    aspect-ratio: 16/9; background: var(--graphite);
+    display: flex; flex-direction: column;
+    align-items: center; justify-content: center; gap: 16px; cursor: pointer;
+  }
+  .play-ring {
+    width: 84px; height: 84px; border-radius: 50%;
+    background: var(--yellow); display: flex; align-items: center; justify-content: center;
+    box-shadow: 0 0 0 12px rgba(245,238,22,.12), 0 0 40px var(--y-glow);
+    transition: transform .2s, box-shadow .2s;
+  }
+  .play-ring:hover { transform: scale(1.08); box-shadow: 0 0 0 18px rgba(245,238,22,.08), 0 0 60px rgba(245,238,22,.55); }
+  .play-ring svg { width: 28px; height: 28px; fill: #040405; margin-left: 4px; }
+  .video-ph p { font-size: 14px; color: var(--gray-mid); }
+
+  /* ═══════════════════════════════════════════════════════════
+     FEATURES
+  ═══════════════════════════════════════════════════════════ */
+  #features { position: relative; }
+  #features::before {
+    content: ''; position: absolute; top: 0; left: 50%; transform: translateX(-50%);
+    width: 700px; height: 400px;
+    background: radial-gradient(ellipse, rgba(245,238,22,.055) 0%, transparent 70%);
+    pointer-events: none;
+  }
+  .feat-hd { text-align: center; margin-bottom: 64px; }
+  .feat-grid {
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px;
+  }
+  .feat-card {
+    padding: 32px 28px;
+    background: var(--glass-bg); border: 1px solid var(--glass-bd);
+    backdrop-filter: var(--glass-blur); -webkit-backdrop-filter: var(--glass-blur);
+    box-shadow: var(--glass-shadow); border-radius: var(--radius);
+    transition: transform .25s, border-color .25s;
+  }
+  .feat-card:hover { transform: translateY(-5px); border-color: rgba(245,238,22,.32); }
+  .feat-icon {
+    width: 54px; height: 54px; border-radius: 14px;
+    background: var(--y-dim); border: 1px solid rgba(245,238,22,.18);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 26px; margin-bottom: 20px;
+  }
+  .feat-title { font-size: 18px; font-weight: 700; color: var(--white); margin-bottom: 8px; }
+  .feat-desc  { font-size: 14px; color: var(--gray-light); line-height: 1.65; }
+
+  /* ═══════════════════════════════════════════════════════════
+     PARA QUEM
+  ═══════════════════════════════════════════════════════════ */
+  #para-quem {
+    background: linear-gradient(180deg, transparent 0%, rgba(22,22,26,.55) 50%, transparent 100%);
+  }
+  .pq-in {
+    max-width: 1160px; margin: 0 auto;
+    display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: start;
+  }
+  .pq-checks { display: flex; flex-direction: column; gap: 12px; }
+  .chk {
+    display: flex; align-items: flex-start; gap: 14px;
+    padding: 18px 20px; border-radius: 14px;
+    background: var(--glass-bg); border: 1px solid var(--glass-bd);
+    backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);
+    transition: border-color .2s;
+  }
+  .chk:hover { border-color: rgba(245,238,22,.26); }
+  .chk-icon {
+    width: 28px; height: 28px; border-radius: 50%; flex-shrink: 0;
+    background: var(--y-dim); display: flex; align-items: center; justify-content: center;
+    margin-top: 1px;
+  }
+  .chk-icon svg { width: 13px; height: 13px; stroke: var(--yellow); fill: none; stroke-width: 2.8; stroke-linecap: round; stroke-linejoin: round; }
+  .chk p { font-size: 15px; color: var(--gray-light); line-height: 1.55; }
+  .chk p strong { color: var(--white); font-weight: 600; }
+
+  /* ═══════════════════════════════════════════════════════════
+     EMENTA / MÓDULOS
+  ═══════════════════════════════════════════════════════════ */
+  #ementa .mod-hd { text-align: center; margin-bottom: 64px; }
+  .mod-grid {
+    display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px;
+    max-width: 900px; margin: 0 auto;
+  }
+  .mod-card {
+    display: flex; align-items: flex-start; gap: 16px;
+    padding: 22px 24px; border-radius: var(--radius);
+    background: var(--glass-bg); border: 1px solid var(--glass-bd);
+    backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
+    transition: border-color .2s, transform .2s;
+  }
+  .mod-card:hover { border-color: rgba(245,238,22,.3); transform: translateX(4px); }
+  .mod-n {
+    flex-shrink: 0; margin-top: 3px;
+    font-size: 10px; font-weight: 700; letter-spacing: .8px;
+    color: var(--yellow); background: var(--y-dim);
+    padding: 4px 10px; border-radius: 6px;
+  }
+  .mod-card h4 { font-size: 15px; color: var(--white); font-weight: 700; margin-bottom: 3px; }
+  .mod-card p  { font-size: 12px; color: var(--gray-mid); }
+
+  /* ═══════════════════════════════════════════════════════════
+     PROFESSORES
+  ═══════════════════════════════════════════════════════════ */
+  #professores::before {
+    content: ''; position: absolute; bottom: 0; left: 50%; transform: translateX(-50%);
+    width: 600px; height: 400px;
+    background: radial-gradient(ellipse, rgba(245,238,22,.045) 0%, transparent 70%);
+    pointer-events: none;
+  }
+  #professores { position: relative; }
+  .prof-hd { text-align: center; margin-bottom: 64px; }
+  .prof-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; }
+  .prof-card {
+    padding: 28px 20px; text-align: center; border-radius: var(--radius);
+    background: var(--glass-bg); border: 1px solid var(--glass-bd);
+    backdrop-filter: var(--glass-blur); -webkit-backdrop-filter: var(--glass-blur);
+    box-shadow: var(--glass-shadow);
+    transition: transform .25s, border-color .25s;
+  }
+  .prof-card:hover { transform: translateY(-5px); border-color: rgba(245,238,22,.28); }
+  .prof-av {
+    width: 80px; height: 80px; border-radius: 50%;
+    background: linear-gradient(135deg, #1e1e22, #111114);
+    border: 2px solid rgba(245,238,22,.22);
+    margin: 0 auto 16px;
+    display: flex; align-items: center; justify-content: center; font-size: 30px;
+    overflow: hidden;
+  }
+  .prof-av img { width: 100%; height: 100%; object-fit: cover; }
+  .prof-name  { font-size: 14px; font-weight: 700; color: var(--white); margin-bottom: 4px; }
+  .prof-spec  { font-size: 12px; color: var(--yellow); font-weight: 600; margin-bottom: 8px; }
+  .prof-bio   { font-size: 12px; color: var(--gray-mid); line-height: 1.55; }
+
+  /* ═══════════════════════════════════════════════════════════
+     DEPOIMENTOS
+  ═══════════════════════════════════════════════════════════ */
+  #depoimentos {
+    background: linear-gradient(180deg, transparent 0%, rgba(22,22,26,.4) 50%, transparent 100%);
+  }
+  .dep-hd { text-align: center; margin-bottom: 64px; }
+  .dep-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+  .dep-card {
+    padding: 28px 24px; border-radius: var(--radius);
+    background: var(--glass-bg); border: 1px solid var(--glass-bd);
+    backdrop-filter: var(--glass-blur); -webkit-backdrop-filter: var(--glass-blur);
+    box-shadow: var(--glass-shadow);
+    display: flex; flex-direction: column; gap: 16px;
+  }
+  .dep-stars { color: var(--yellow); font-size: 14px; letter-spacing: 2px; }
+  .dep-txt { font-size: 14px; color: var(--gray-light); line-height: 1.75; flex: 1; }
+  .dep-author { display: flex; align-items: center; gap: 12px; padding-top: 8px; border-top: 1px solid var(--glass-bd); }
+  .dep-av {
+    width: 40px; height: 40px; border-radius: 50%; flex-shrink: 0;
+    background: linear-gradient(135deg, rgba(245,238,22,.2), rgba(245,238,22,.05));
+    border: 1px solid rgba(245,238,22,.2);
+    display: flex; align-items: center; justify-content: center; font-size: 18px;
+    overflow: hidden;
+  }
+  .dep-av img { width: 100%; height: 100%; object-fit: cover; }
+  .dep-name { font-size: 13px; font-weight: 700; color: var(--white); }
+  .dep-role { font-size: 11px; color: var(--gray-mid); }
+
+  /* ═══════════════════════════════════════════════════════════
+     FAQ
+  ═══════════════════════════════════════════════════════════ */
+  #faq .faq-hd { text-align: center; margin-bottom: 64px; }
+  .faq-list { max-width: 760px; margin: 0 auto; display: flex; flex-direction: column; gap: 10px; }
+  .faq-item {
+    border-radius: var(--radius);
+    background: var(--glass-bg); border: 1px solid var(--glass-bd);
+    backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);
+    overflow: hidden; transition: border-color .2s;
+  }
+  .faq-item.open { border-color: rgba(245,238,22,.32); }
+  .faq-q {
+    display: flex; align-items: center; justify-content: space-between;
+    gap: 20px; padding: 22px 28px; cursor: pointer;
+  }
+  .faq-q h4 { font-size: 15px; font-weight: 600; color: var(--white); }
+  .faq-tog {
+    width: 28px; height: 28px; border-radius: 50%; flex-shrink: 0;
+    background: var(--y-dim); display: flex; align-items: center; justify-content: center;
+    transition: background .2s, transform .3s;
+  }
+  .faq-item.open .faq-tog { background: rgba(245,238,22,.22); transform: rotate(45deg); }
+  .faq-tog svg { width: 14px; height: 14px; stroke: var(--yellow); fill: none; stroke-width: 2.5; stroke-linecap: round; }
+  .faq-body { max-height: 0; overflow: hidden; transition: max-height .36s ease; }
+  .faq-body-in { padding: 0 28px 22px; font-size: 14px; color: var(--gray-light); line-height: 1.72; }
+
+  /* ═══════════════════════════════════════════════════════════
+     PRICING
+  ═══════════════════════════════════════════════════════════ */
+  #pricing {
+    position: relative; overflow: hidden;
+    background: linear-gradient(180deg, transparent 0%, rgba(22,22,26,.3) 100%);
+  }
+  #pricing::before {
+    content: ''; position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%);
+    width: 800px; height: 700px;
+    background: radial-gradient(ellipse, rgba(245,238,22,.08) 0%, transparent 65%);
+    pointer-events: none;
+  }
+  .price-in { max-width: 620px; margin: 0 auto; text-align: center; position: relative; z-index: 1; }
+  .price-card {
+    margin-top: 48px; padding: 52px 44px;
+    background: linear-gradient(140deg, rgba(255,255,255,.09), rgba(255,255,255,.025));
+    border: 1px solid rgba(245,238,22,.26);
+    border-radius: 32px;
+    backdrop-filter: blur(32px); -webkit-backdrop-filter: blur(32px);
+    box-shadow: 0 40px 90px rgba(0,0,0,.5),
+                0 0 0 1px rgba(245,238,22,.07),
+                inset 0 1px 0 rgba(255,255,255,.14),
+                0 0 80px rgba(245,238,22,.07);
+  }
+  .price-badge {
+    display: inline-block; margin-bottom: 12px;
+    padding: 6px 18px; border-radius: 999px;
+    font-size: 11px; font-weight: 700; letter-spacing: 1.4px; text-transform: uppercase;
+    color: #040405; background: var(--yellow);
+  }
+  .price-card-title { font-size: 22px; font-weight: 800; color: var(--white); margin-bottom: 6px; }
+  .price-card-sub   { font-size: 14px; color: var(--gray-mid); margin-bottom: 36px; }
+
+  .price-from { font-size: 13px; color: var(--gray-mid); text-decoration: line-through; margin-bottom: 6px; }
+  .price-amount {
+    display: flex; align-items: flex-start; justify-content: center;
+    gap: 6px; line-height: 1; margin-bottom: 8px;
+  }
+  .price-cur { font-size: 22px; font-weight: 700; color: var(--white); padding-top: 10px; }
+  .price-val { font-size: 80px; font-weight: 900; color: var(--white); letter-spacing: -3px; }
+  .price-cts { font-size: 28px; font-weight: 700; color: var(--white); padding-top: 14px; }
+  .price-period { font-size: 13px; color: var(--gray-mid); margin-bottom: 36px; }
+  .price-period em { color: var(--yellow); font-style: normal; font-weight: 700; }
+
+  .price-cta { width: 100%; font-size: 18px; padding: 20px; margin-bottom: 16px; }
+  .price-lock {
+    display: flex; align-items: center; justify-content: center;
+    gap: 8px; font-size: 13px; color: var(--gray-mid); margin-bottom: 36px;
+  }
+
+  .price-incl {
+    border-top: 1px solid var(--glass-bd); padding-top: 28px;
+    display: flex; flex-direction: column; gap: 12px; text-align: left;
+  }
+  .incl-row {
+    display: flex; align-items: center; gap: 12px;
+    font-size: 14px; color: var(--gray-light);
+  }
+  .incl-chk {
+    width: 22px; height: 22px; border-radius: 50%; flex-shrink: 0;
+    background: var(--y-dim); display: flex; align-items: center; justify-content: center;
+    font-size: 11px; color: var(--yellow); font-weight: 700;
+  }
+
+  /* ═══════════════════════════════════════════════════════════
+     FOOTER
+  ═══════════════════════════════════════════════════════════ */
+  #footer { padding: 44px 24px; border-top: 1px solid var(--glass-bd); }
+  .footer-row {
+    max-width: 1160px; margin: 0 auto;
+    display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 24px;
+  }
+  .footer-copy { font-size: 13px; color: var(--gray-mid); }
+  .footer-links { display: flex; gap: 24px; }
+  .footer-links a { font-size: 13px; color: var(--gray-mid); transition: color .2s; }
+  .footer-links a:hover { color: var(--yellow); }
+
+  /* ═══════════════════════════════════════════════════════════
+     STICKY BOTTOM BAR
+  ═══════════════════════════════════════════════════════════ */
+  #sticky {
+    position: fixed; bottom: 24px; left: 50%; transform: translateX(-50%) translateY(20px);
+    z-index: 300; opacity: 0; pointer-events: none;
+    transition: opacity .3s, transform .3s;
+  }
+  #sticky.vis { opacity: 1; transform: translateX(-50%) translateY(0); pointer-events: auto; }
+  .sticky-in {
+    display: flex; align-items: center; gap: 16px;
+    padding: 12px 16px 12px 26px; border-radius: 999px;
+    background: rgba(18,18,22,.96); border: 1px solid rgba(245,238,22,.24);
+    backdrop-filter: blur(24px); -webkit-backdrop-filter: blur(24px);
+    box-shadow: 0 20px 60px rgba(0,0,0,.5), 0 0 40px rgba(245,238,22,.08);
+  }
+  .sticky-txt { font-size: 14px; font-weight: 600; color: var(--white); white-space: nowrap; }
+  .sticky-txt span { color: var(--yellow); }
+
+  /* ═══════════════════════════════════════════════════════════
+     RESPONSIVE
+  ═══════════════════════════════════════════════════════════ */
+  @media (max-width: 900px) {
+    .hero-in { grid-template-columns: 1fr; gap: 48px; }
+    .hero-visual { order: -1; max-width: 360px; margin: 0 auto; }
+    .flt-1, .flt-2 { display: none; }
+    .feat-grid { grid-template-columns: 1fr 1fr; }
+    .pq-in { grid-template-columns: 1fr; gap: 40px; }
+    .prof-grid { grid-template-columns: repeat(2, 1fr); }
+    .dep-grid { grid-template-columns: 1fr; }
+    .mod-grid { grid-template-columns: 1fr; }
+  }
+  @media (max-width: 600px) {
+    .sec { padding: 72px 20px; }
+    .feat-grid { grid-template-columns: 1fr; }
+    .prof-grid { grid-template-columns: 1fr; }
+    .hero-stats { flex-wrap: wrap; }
+    .h-stat { padding: 0 18px; }
+    .price-card { padding: 36px 22px; }
+    .price-val { font-size: 60px; }
+    .nav-wpp { display: none; }
+  }
+  </style>
+</head>
+<body>
+
+<!-- ══════════════════════ NAVBAR ══════════════════════ -->
+<nav id="nav">
+  <div class="nav-row">
+    <a href="#" class="brand">
+      <span class="brand-dot"></span>
+      clinic<em>talks</em>
+    </a>
+    <div class="nav-right">
+      <a href="https://wa.me/5500000000000" class="nav-wpp" target="_blank" rel="noopener">
+        <span class="wpp-dot"></span>
+        Precisa de ajuda? Fale conosco
+      </a>
+      <a href="#pricing" class="btn btn-primary" style="padding:11px 26px;font-size:14px;">Inscrever-se</a>
+    </div>
+  </div>
+</nav>
+
+<!-- ══════════════════════ HERO ══════════════════════ -->
+<section id="hero">
+  <div class="hero-in">
+
+    <!-- LEFT: copy -->
+    <div class="hero-left">
+      <div class="hero-badge" data-reveal>
+        <span class="hero-badge-dot"></span>
+        Grupo Talks · Preparatório Exclusivo
+      </div>
+
+      <h1 class="hero-title" data-reveal data-d="1">
+        <span class="hero-title-pre">Preparatório para a prova de</span>
+        <span class="hero-title-main">CLÍNICA<br>MÉDICA</span>
+      </h1>
+
+      <p class="hero-desc" data-reveal data-d="2">
+        Desenvolvido para médicos que buscam
+        <strong>segurança, estratégia</strong> e
+        <strong>aprovação</strong> na prova de Clínica Médica —
+        com método eficiente, adaptado à rotina de quem já trabalha.
+      </p>
+
+      <div class="hero-ctas" data-reveal data-d="3">
+        <a href="#pricing" class="btn btn-primary" style="font-size:18px;padding:20px 50px;">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          Quero me inscrever
+        </a>
+        <a href="#video" class="btn btn-ghost">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="5,3 19,12 5,21"/></svg>
+          Ver apresentação
+        </a>
+      </div>
+
+      <div class="hero-stats" data-reveal data-d="4">
+        <div class="h-stat">
+          <div class="h-stat-n">+70</div>
+          <div class="h-stat-l">Aulas gravadas</div>
+        </div>
+        <div class="h-stat">
+          <div class="h-stat-n">4</div>
+          <div class="h-stat-l">Simulados online</div>
+        </div>
+        <div class="h-stat">
+          <div class="h-stat-n">3×</div>
+          <div class="h-stat-l">Aulas ao vivo/semana</div>
+        </div>
+        <div class="h-stat">
+          <div class="h-stat-n">100%</div>
+          <div class="h-stat-l">Online</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- RIGHT: visual -->
+    <div class="hero-visual" data-reveal data-d="2">
+      <!-- Floating card 1 -->
+      <div class="flt flt-1">
+        <div class="flt-label">Banco de questões</div>
+        <div class="flt-val">+1.200</div>
+        <div class="flt-sub">questões comentadas</div>
+      </div>
+
+      <div class="photo-wrap">
+        <!-- SUBSTITUA por: <img src="foto-professor.webp" alt="Professor de Clínica Médica"> -->
+        <div class="photo-ph">
+          <div class="photo-ph-icon">🩺</div>
+          <p>Foto do especialista<br>— substituir aqui</p>
+        </div>
+      </div>
+      <div class="photo-glow"></div>
+
+      <!-- Floating card 2 -->
+      <div class="flt flt-2">
+        <div class="flt-label">Especialidade</div>
+        <div class="flt-val flt-yl">Clínica<br>Médica</div>
+        <div class="flt-sub">Grupo Talks</div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ══════════════════════ TAGLINE BAR ══════════════════════ -->
+<div id="tagline">
+  <p class="tagline-txt">
+    DESENVOLVIDO PARA MÉDICOS QUE BUSCAM
+    <em>SEGURANÇA, ESTRATÉGIA E APROVAÇÃO.</em>
+  </p>
+</div>
+
+<!-- ══════════════════════ VÍDEO ══════════════════════ -->
+<section id="video" class="sec">
+  <div class="video-max">
+    <div class="video-hd" data-reveal>
+      <div class="eyebrow eyebrow-center">Conheça o curso</div>
+      <h2 class="sec-title" style="text-align:center;">
+        Veja como funciona o <span class="yl">preparatório</span>
+      </h2>
+    </div>
+    <div class="video-frame" data-reveal data-d="1">
+      <!-- SUBSTITUA o src pelo seu vídeo: -->
+      <!-- <iframe src="https://player.vimeo.com/video/SEU_ID" allowfullscreen></iframe> -->
+      <div class="video-ph">
+        <div class="play-ring">
+          <svg viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21"/></svg>
+        </div>
+        <p>Vídeo de apresentação — substituir src do iframe</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ══════════════════════ FEATURES ══════════════════════ -->
+<section id="features" class="sec">
+  <div class="wrap">
+    <div class="feat-hd" data-reveal>
+      <div class="eyebrow eyebrow-center">Diferenciais</div>
+      <h2 class="sec-title" style="text-align:center;">
+        Por que o <span class="yl">Clinic Talks</span>?
+      </h2>
+      <p class="sec-sub" style="text-align:center;margin:0 auto;">
+        Um preparatório construído para quem tem plantão, hospital e ainda precisa estudar com eficiência.
+      </p>
+    </div>
+
+    <div class="feat-grid">
+      <div class="feat-card" data-reveal data-d="1">
+        <div class="feat-icon">💻</div>
+        <h3 class="feat-title">100% Online</h3>
+        <p class="feat-desc">Acesse quando e onde quiser pela plataforma Talks — celular, tablet ou computador, sem horário fixo.</p>
+      </div>
+      <div class="feat-card" data-reveal data-d="2">
+        <div class="feat-icon">🎓</div>
+        <h3 class="feat-title">+70 Aulas Gravadas</h3>
+        <p class="feat-desc">Conteúdo direto ao ponto com professores titulados e especialistas em Clínica Médica do Grupo Talks.</p>
+      </div>
+      <div class="feat-card" data-reveal data-d="3">
+        <div class="feat-icon">📅</div>
+        <h3 class="feat-title">3 Aulas ao Vivo/Semana</h3>
+        <p class="feat-desc">Cronograma otimizado para a rotina médica. Estude sem abrir mão dos seus compromissos.</p>
+      </div>
+      <div class="feat-card" data-reveal data-d="4">
+        <div class="feat-icon">📋</div>
+        <h3 class="feat-title">Banco de Questões</h3>
+        <p class="feat-desc">Questões comentadas e atualizadas com foco na prova de Clínica Médica, com gabarito explicativo detalhado.</p>
+      </div>
+      <div class="feat-card" data-reveal data-d="5">
+        <div class="feat-icon">📝</div>
+        <h3 class="feat-title">4 Simulados Online</h3>
+        <p class="feat-desc">Simule a prova no formato oficial. Acompanhe sua evolução e identifique pontos de melhoria em cada etapa.</p>
+      </div>
+      <div class="feat-card" data-reveal data-d="6">
+        <div class="feat-icon">🏆</div>
+        <h3 class="feat-title">Time de Especialistas</h3>
+        <p class="feat-desc">Desenvolvido pelo Grupo Talks — maior referência nacional em preparação para provas de especialidade médica.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ══════════════════════ PARA QUEM ══════════════════════ -->
+<section id="para-quem" class="sec">
+  <div class="pq-in wrap">
+    <div data-reveal>
+      <div class="eyebrow">Para quem é</div>
+      <h2 class="sec-title">Este preparatório foi<br>feito <span class="yl">para você</span> se...</h2>
+      <p class="sec-sub">Identifica-se com pelo menos uma das situações abaixo? Então você está no lugar certo.</p>
+      <br><br>
+      <a href="#pricing" class="btn btn-primary">Quero começar agora</a>
+    </div>
+    <div class="pq-checks">
+      <div class="chk" data-reveal data-d="1">
+        <div class="chk-icon"><svg viewBox="0 0 24 24"><polyline points="20,6 9,17 4,12"/></svg></div>
+        <p>Você quer conquistar o <strong>RQE de Clínica Médica</strong> e busca um método eficiente e testado</p>
+      </div>
+      <div class="chk" data-reveal data-d="2">
+        <div class="chk-icon"><svg viewBox="0 0 24 24"><polyline points="20,6 9,17 4,12"/></svg></div>
+        <p>Você tem <strong>pouco tempo para estudar</strong> e precisa de conteúdo direto ao ponto, sem enrolação</p>
+      </div>
+      <div class="chk" data-reveal data-d="3">
+        <div class="chk-icon"><svg viewBox="0 0 24 24"><polyline points="20,6 9,17 4,12"/></svg></div>
+        <p>Você quer <strong>praticar com questões reais</strong> e simulados antes de chegar na prova</p>
+      </div>
+      <div class="chk" data-reveal data-d="4">
+        <div class="chk-icon"><svg viewBox="0 0 24 24"><polyline points="20,6 9,17 4,12"/></svg></div>
+        <p>Você busca <strong>segurança e estratégia</strong> para responder cada questão com confiança</p>
+      </div>
+      <div class="chk" data-reveal data-d="5">
+        <div class="chk-icon"><svg viewBox="0 0 24 24"><polyline points="20,6 9,17 4,12"/></svg></div>
+        <p>Você quer aprender com <strong>especialistas que dominam o que cai na prova</strong></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ══════════════════════ EMENTA ══════════════════════ -->
+<section id="ementa" class="sec">
+  <div class="wrap">
+    <div class="mod-hd" data-reveal>
+      <div class="eyebrow eyebrow-center">Ementa</div>
+      <h2 class="sec-title" style="text-align:center;">O que você vai <span class="yl">aprender</span></h2>
+      <p class="sec-sub" style="text-align:center;margin:0 auto;">
+        Conteúdo completo organizado em módulos temáticos, do básico ao avançado, alinhado ao que mais cai na prova.
+      </p>
+    </div>
+    <div class="mod-grid">
+      <div class="mod-card" data-reveal data-d="1"><span class="mod-n">M01</span><div><h4>Cardiologia Clínica</h4><p>ICC, SCA, arritmias, HAS e emergências cardiovasculares</p></div></div>
+      <div class="mod-card" data-reveal data-d="2"><span class="mod-n">M02</span><div><h4>Pneumologia</h4><p>DPOC, asma, pneumonias, TEP e insuficiência respiratória</p></div></div>
+      <div class="mod-card" data-reveal data-d="3"><span class="mod-n">M03</span><div><h4>Gastroenterologia</h4><p>Hepatites, cirrose, DII e doença péptica</p></div></div>
+      <div class="mod-card" data-reveal data-d="4"><span class="mod-n">M04</span><div><h4>Endocrinologia</h4><p>Diabetes mellitus, tireoide, adrenal e distúrbios metabólicos</p></div></div>
+      <div class="mod-card" data-reveal data-d="5"><span class="mod-n">M05</span><div><h4>Nefrologia</h4><p>IRA, DRC, distúrbios hidroeletrolíticos e ácido-base</p></div></div>
+      <div class="mod-card" data-reveal data-d="6"><span class="mod-n">M06</span><div><h4>Reumatologia</h4><p>LES, artrite reumatoide, vasculites e doenças autoimunes</p></div></div>
+      <div class="mod-card" data-reveal data-d="1"><span class="mod-n">M07</span><div><h4>Hematologia</h4><p>Anemias, coagulopatias, trombofilias e síndromes linfoproliferativas</p></div></div>
+      <div class="mod-card" data-reveal data-d="2"><span class="mod-n">M08</span><div><h4>Infectologia</h4><p>Sepse, HIV, tuberculose e infecções hospitalares</p></div></div>
+      <div class="mod-card" data-reveal data-d="3"><span class="mod-n">M09</span><div><h4>Neurologia Clínica</h4><p>AVE, meningite, epilepsia e distúrbios do nível de consciência</p></div></div>
+      <div class="mod-card" data-reveal data-d="4"><span class="mod-n">M10</span><div><h4>Simulados &amp; Revisão Final</h4><p>4 simulados completos + revisão das questões mais cobradas</p></div></div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ══════════════════════ PROFESSORES ══════════════════════ -->
+<section id="professores" class="sec">
+  <div class="wrap">
+    <div class="prof-hd" data-reveal>
+      <div class="eyebrow eyebrow-center">Nossa equipe</div>
+      <h2 class="sec-title" style="text-align:center;">Aprenda com quem <span class="yl">entende</span></h2>
+      <p class="sec-sub" style="text-align:center;margin:0 auto;">
+        Especialistas titulados, com experiência clínica real e didática aprovada por milhares de médicos no Brasil.
+      </p>
+    </div>
+    <div class="prof-grid">
+      <div class="prof-card" data-reveal data-d="1">
+        <div class="prof-av"><!-- <img src="prof1.webp" alt=""> --> 👨‍⚕️</div>
+        <div class="prof-name">Prof. Dr. [Nome]</div>
+        <div class="prof-spec">Clínica Médica</div>
+        <div class="prof-bio">Especialista em Medicina Interna. Mestre em Ciências da Saúde.</div>
+      </div>
+      <div class="prof-card" data-reveal data-d="2">
+        <div class="prof-av"><!-- <img src="prof2.webp" alt=""> --> 👩‍⚕️</div>
+        <div class="prof-name">Profa. Dra. [Nome]</div>
+        <div class="prof-spec">Cardiologia / Pneumologia</div>
+        <div class="prof-bio">+10 anos de experiência clínica. Professora universitária e preceptora de residência.</div>
+      </div>
+      <div class="prof-card" data-reveal data-d="3">
+        <div class="prof-av"><!-- <img src="prof3.webp" alt=""> --> 👨‍⚕️</div>
+        <div class="prof-name">Prof. Dr. [Nome]</div>
+        <div class="prof-spec">Nefrologia / Endocrinologia</div>
+        <div class="prof-bio">Especialista com atuação acadêmica e hospitalar. Doutor em Ciências.</div>
+      </div>
+      <div class="prof-card" data-reveal data-d="4">
+        <div class="prof-av"><!-- <img src="prof4.webp" alt=""> --> 👩‍⚕️</div>
+        <div class="prof-name">Profa. Dra. [Nome]</div>
+        <div class="prof-spec">Infectologia / Reumatologia</div>
+        <div class="prof-bio">Especialista em doenças autoimunes e infectologia hospitalar.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ══════════════════════ DEPOIMENTOS ══════════════════════ -->
+<section id="depoimentos" class="sec">
+  <div class="wrap">
+    <div class="dep-hd" data-reveal>
+      <div class="eyebrow eyebrow-center">Depoimentos</div>
+      <h2 class="sec-title" style="text-align:center;">O que dizem nossos <span class="yl">alunos</span></h2>
+    </div>
+    <div class="dep-grid">
+      <div class="dep-card" data-reveal data-d="1">
+        <div class="dep-stars">★★★★★</div>
+        <p class="dep-txt">"O preparatório do Clinic Talks me deu a base que eu precisava para encarar a prova com confiança. As aulas são objetivas e os simulados são muito próximos do real."</p>
+        <div class="dep-author">
+          <div class="dep-av"><!-- <img src="aluna1.webp" alt=""> --> 👩</div>
+          <div>
+            <div class="dep-name">Dra. Ana P.</div>
+            <div class="dep-role">Aprovada no RQE de Clínica Médica</div>
+          </div>
+        </div>
+      </div>
+      <div class="dep-card" data-reveal data-d="2">
+        <div class="dep-stars">★★★★★</div>
+        <p class="dep-txt">"Estudei conciliando com o plantão e me preparei em poucos meses. O cronograma de 3 aulas por semana foi essencial para manter a consistência sem me sobrecarregar."</p>
+        <div class="dep-author">
+          <div class="dep-av"><!-- <img src="aluno2.webp" alt=""> --> 👨</div>
+          <div>
+            <div class="dep-name">Dr. Carlos M.</div>
+            <div class="dep-role">Médico clínico, aprovado em 2025</div>
+          </div>
+        </div>
+      </div>
+      <div class="dep-card" data-reveal data-d="3">
+        <div class="dep-stars">★★★★★</div>
+        <p class="dep-txt">"Tentei me preparar sozinha duas vezes sem sucesso. No Clinic Talks entendi onde estava errando. A didática dos professores é completamente diferente de outros cursos."</p>
+        <div class="dep-author">
+          <div class="dep-av"><!-- <img src="aluna3.webp" alt=""> --> 👩</div>
+          <div>
+            <div class="dep-name">Dra. Fernanda L.</div>
+            <div class="dep-role">Especialista em Clínica Médica</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ══════════════════════ FAQ ══════════════════════ -->
+<section id="faq" class="sec">
+  <div class="wrap">
+    <div class="faq-hd" data-reveal>
+      <div class="eyebrow eyebrow-center">Dúvidas</div>
+      <h2 class="sec-title" style="text-align:center;">Perguntas <span class="yl">frequentes</span></h2>
+    </div>
+    <div class="faq-list">
+
+      <div class="faq-item" data-reveal data-d="1">
+        <div class="faq-q" onclick="faq(this)">
+          <h4>Para quem é o preparatório de Clínica Médica?</h4>
+          <div class="faq-tog"><svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div>
+        </div>
+        <div class="faq-body"><div class="faq-body-in">Para médicos que desejam conquistar o Título de Especialista (RQE) em Clínica Médica. O conteúdo foi estruturado para quem quer aprovação com método eficiente, independente do tempo de formado.</div></div>
+      </div>
+
+      <div class="faq-item" data-reveal data-d="2">
+        <div class="faq-q" onclick="faq(this)">
+          <h4>Por quanto tempo tenho acesso ao material?</h4>
+          <div class="faq-tog"><svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div>
+        </div>
+        <div class="faq-body"><div class="faq-body-in">O acesso às aulas gravadas fica disponível durante todo o período do curso. As aulas ao vivo são gravadas e ficam na plataforma para você assistir quando quiser, no seu ritmo.</div></div>
+      </div>
+
+      <div class="faq-item" data-reveal data-d="3">
+        <div class="faq-q" onclick="faq(this)">
+          <h4>Como funcionam as aulas ao vivo?</h4>
+          <div class="faq-tog"><svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div>
+        </div>
+        <div class="faq-body"><div class="faq-body-in">São 3 encontros semanais ao vivo com teoria e resolução de questões. As aulas acontecem pela plataforma Talks e ficam gravadas para quem não puder assistir no horário marcado.</div></div>
+      </div>
+
+      <div class="faq-item" data-reveal data-d="4">
+        <div class="faq-q" onclick="faq(this)">
+          <h4>Posso acessar pelo celular?</h4>
+          <div class="faq-tog"><svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div>
+        </div>
+        <div class="faq-body"><div class="faq-body-in">Sim! A plataforma Talks é totalmente responsiva e funciona em qualquer dispositivo — celular, tablet ou computador — com a mesma qualidade de experiência.</div></div>
+      </div>
+
+      <div class="faq-item" data-reveal data-d="5">
+        <div class="faq-q" onclick="faq(this)">
+          <h4>O curso tem garantia?</h4>
+          <div class="faq-tog"><svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div>
+        </div>
+        <div class="faq-body"><div class="faq-body-in">Sim. Oferecemos garantia de 7 dias. Se por qualquer motivo você não ficar satisfeito, basta entrar em contato e devolvemos 100% do seu investimento, sem burocracia.</div></div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ══════════════════════ PRICING ══════════════════════ -->
+<section id="pricing" class="sec">
+  <div class="wrap">
+    <div class="price-in">
+      <div data-reveal>
+        <div class="eyebrow eyebrow-center">Invista na sua aprovação</div>
+        <h2 class="sec-title" style="text-align:center;">
+          Garanta seu acesso ao<br><span class="yl">preparatório completo</span>
+        </h2>
+      </div>
+
+      <div class="price-card" data-reveal data-d="1">
+        <div class="price-badge">✦ Acesso Completo</div>
+        <div class="price-card-title">Preparatório Clínica Médica</div>
+        <div class="price-card-sub">Tudo que você precisa para passar na prova</div>
+
+        <p class="price-from">de R$ 997,00</p>
+        <div class="price-amount">
+          <span class="price-cur">R$</span>
+          <span class="price-val">697</span>
+          <span class="price-cts">,00</span>
+        </div>
+        <p class="price-period">ou <em>12× de R$ 65,90</em> no cartão sem juros</p>
+
+        <a href="#" class="btn btn-primary price-cta">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          Garantir minha vaga agora
+        </a>
+
+        <div class="price-lock">
+          🔒&nbsp; Pagamento 100% seguro &nbsp;·&nbsp; Garantia de 7 dias
+        </div>
+
+        <div class="price-incl">
+          <div class="incl-row"><div class="incl-chk">✓</div>+70 aulas gravadas com acesso durante o curso</div>
+          <div class="incl-row"><div class="incl-chk">✓</div>3 aulas ao vivo por semana com especialistas</div>
+          <div class="incl-row"><div class="incl-chk">✓</div>Banco de questões comentadas e atualizado</div>
+          <div class="incl-row"><div class="incl-chk">✓</div>4 simulados online com gabarito comentado</div>
+          <div class="incl-row"><div class="incl-chk">✓</div>Cronograma adaptado à rotina médica</div>
+          <div class="incl-row"><div class="incl-chk">✓</div>Suporte via plataforma e WhatsApp</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════ FOOTER ══════════════════════ -->
+<footer id="footer">
+  <div class="footer-row">
+    <div style="display:flex;align-items:center;gap:12px;">
+      <span style="font-size:15px;font-weight:800;color:var(--white);">clinic<span style="color:var(--yellow);">talks</span></span>
+      <span class="footer-copy">· Grupo Talks · © 2026 — Todos os direitos reservados</span>
+    </div>
+    <div class="footer-links">
+      <a href="#">Política de Privacidade</a>
+      <a href="#">Termos de Uso</a>
+      <a href="https://wa.me/5500000000000" target="_blank" rel="noopener">Fale Conosco</a>
+    </div>
+  </div>
+</footer>
+
+<!-- ══════════════════════ STICKY BAR ══════════════════════ -->
+<div id="sticky">
+  <div class="sticky-in">
+    <span class="sticky-txt">🩺 <span>Clínica Médica</span> — Preparatório Clinic Talks</span>
+    <a href="#pricing" class="btn btn-primary" style="padding:12px 28px;font-size:14px;">Inscrever-se</a>
+  </div>
+</div>
+
+<!-- ══════════════════════ JS ══════════════════════ -->
+<script>
+  /* ── navbar stick ── */
+  const nav = document.getElementById('nav');
+  const sticky = document.getElementById('sticky');
+  window.addEventListener('scroll', () => {
+    nav.classList.toggle('stuck', window.scrollY > 60);
+    sticky.classList.toggle('vis', window.scrollY > 500);
+  }, { passive: true });
+
+  /* ── scroll reveal ── */
+  const obs = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('on'); obs.unobserve(e.target); } });
+  }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
+  document.querySelectorAll('[data-reveal]').forEach(el => obs.observe(el));
+
+  /* ── FAQ accordion ── */
+  function faq(btn) {
+    const item   = btn.parentElement;
+    const body   = item.querySelector('.faq-body');
+    const isOpen = item.classList.contains('open');
+    document.querySelectorAll('.faq-item').forEach(i => {
+      i.classList.remove('open');
+      i.querySelector('.faq-body').style.maxHeight = '0';
+    });
+    if (!isOpen) {
+      item.classList.add('open');
+      body.style.maxHeight = body.scrollHeight + 'px';
+    }
+  }
+
+  /* ── smooth anchors ── */
+  document.querySelectorAll('a[href^="#"]').forEach(a => {
+    a.addEventListener('click', e => {
+      const t = document.querySelector(a.getAttribute('href'));
+      if (t) { e.preventDefault(); t.scrollIntoView({ behavior: 'smooth' }); }
+    });
+  });
+</script>
+
+</body>
+</html>
