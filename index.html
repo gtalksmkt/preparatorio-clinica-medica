@@ -377,13 +377,13 @@
   .pcard-name { font-size:21px; font-weight:900; color:var(--white); letter-spacing:-.4px; line-height:1.1; margin-bottom:6px; }
   .pcard-sub { font-size:12.5px; color:var(--gm); line-height:1.5; min-height:38px; margin-bottom:20px; }
 
-  .pcard-price { display:flex; flex-direction:column; gap:2px; padding-bottom:20px; margin-bottom:20px; border-bottom:1px solid var(--gbd); }
+  .pcard-price { display:flex; flex-direction:column; gap:2px; padding-top:22px; margin-bottom:22px; border-top:1px solid var(--gbd); }
   .pcard-price-pre { font-size:13px; font-weight:600; color:var(--gm); margin-bottom:3px; }
   .pcard-price-val { font-size:30px; font-weight:900; color:var(--white); letter-spacing:-1px; line-height:1; }
   .pcard.featured .pcard-price-val { color:var(--yellow); }
   .pcard-price-period { font-size:12px; color:var(--gm); margin-top:5px; }
 
-  .pcard-feats { list-style:none; display:flex; flex-direction:column; gap:11px; margin-bottom:26px; flex:1; }
+  .pcard-feats { list-style:none; display:flex; flex-direction:column; gap:11px; padding-bottom:22px; flex:1; }
   .pcard-feats li { display:flex; align-items:flex-start; gap:10px; font-size:13.5px; color:var(--gl); line-height:1.45; }
   .pcard-feats svg { width:17px; height:17px; flex-shrink:0; margin-top:1px; stroke:var(--yellow); fill:none; stroke-width:2.6; stroke-linecap:round; stroke-linejoin:round; }
   .pcard-note { font-size:11.5px; color:var(--gm); font-style:italic; margin-bottom:20px; }
@@ -407,8 +407,8 @@
 
   /* ═══ RESPONSIVE ════════════════════════════════════════════ */
   @media (max-width:960px) {
-    .hero-in, .pq-in, .cred-in, .prof-in { grid-template-columns:1fr; gap:48px; }
-    .hero-vis { order:-1; max-width:340px; margin:0 auto; }
+    .hero-in, .pq-in, .cred-in, .prof-in { grid-template-columns:1fr; gap:40px; }
+    .hero-vis { max-width:320px; margin:0 auto; }
     .flt-1,.flt-2 { display:none; }
     .feat-grid { grid-template-columns:1fr 1fr; }
     .dep-grid { grid-template-columns:1fr; }
@@ -426,6 +426,8 @@
     .hero-stats { flex-wrap:wrap; }
     .hst { padding:0 16px; }
     .nav-wpp { display:none; }
+    .hero-vis { display:none; }
+    #hero { min-height:auto; padding-bottom:64px; }
 
     /* sticky bar — fit mobile, sem estourar largura */
     #sticky { left:12px; right:12px; bottom:14px; transform:translateY(20px); }
@@ -965,17 +967,17 @@
         <div class="pcard-tag">Revisão · Agosto</div>
         <div class="pcard-name">Revisão Teórica</div>
         <div class="pcard-sub">Revisão online focada na prova teórica.</div>
-        <div class="pcard-price">
-          <div class="pcard-price-pre">6x de</div>
-          <div class="pcard-price-val">R$ 233,32</div>
-          <div class="pcard-price-period">sem juros</div>
-        </div>
         <ul class="pcard-feats">
           <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>17 a 21 de agosto · todos os dias às 20h</li>
           <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Online · ao vivo com gravação</li>
           <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>100% focada no edital e questões anteriores</li>
           <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Preparação para a prova de 23 de agosto</li>
         </ul>
+        <div class="pcard-price">
+          <div class="pcard-price-pre">6x de</div>
+          <div class="pcard-price-val">R$ 233,32</div>
+          <div class="pcard-price-period">sem juros</div>
+        </div>
         <a href="#" class="btn btn-outline-y">Garantir minha vaga</a>
       </div>
 
@@ -984,17 +986,17 @@
         <div class="pcard-tag">Revisão · Novembro</div>
         <div class="pcard-name">Revisão Prática</div>
         <div class="pcard-sub">Imersão presencial focada na prova prática.</div>
-        <div class="pcard-price">
-          <div class="pcard-price-pre">6x de</div>
-          <div class="pcard-price-val">R$ 583,32</div>
-          <div class="pcard-price-period">sem juros</div>
-        </div>
         <ul class="pcard-feats">
           <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>27 e 28 de novembro · dia inteiro</li>
           <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Presencial em São Paulo</li>
           <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Simulação de cenários da prova prática</li>
           <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Preparação para a prova de 29 de novembro</li>
         </ul>
+        <div class="pcard-price">
+          <div class="pcard-price-pre">6x de</div>
+          <div class="pcard-price-val">R$ 583,32</div>
+          <div class="pcard-price-period">sem juros</div>
+        </div>
         <a href="#" class="btn btn-outline-y">Garantir minha vaga</a>
       </div>
 
@@ -1003,17 +1005,17 @@
         <div class="pcard-tag">Teórica + Prática</div>
         <div class="pcard-name">Combo Revisões</div>
         <div class="pcard-sub">As duas revisões juntas com preço especial.</div>
-        <div class="pcard-price">
-          <div class="pcard-price-pre">6x de</div>
-          <div class="pcard-price-val">R$ 734,97</div>
-          <div class="pcard-price-period">sem juros · preço especial</div>
-        </div>
         <ul class="pcard-feats">
           <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Revisão Teórica completa (agosto)</li>
           <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Revisão Prática completa (novembro)</li>
           <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Preparação para a teórica e a prática</li>
         </ul>
         <div class="pcard-note">Não inclui o preparatório.</div>
+        <div class="pcard-price">
+          <div class="pcard-price-pre">6x de</div>
+          <div class="pcard-price-val">R$ 734,97</div>
+          <div class="pcard-price-period">sem juros · preço especial</div>
+        </div>
         <a href="#" class="btn btn-primary">Garantir o combo</a>
       </div>
 
@@ -1022,17 +1024,17 @@
         <div class="pcard-tag muted">Curso completo</div>
         <div class="pcard-name">Preparatório</div>
         <div class="pcard-sub">Aulas, banco de questões e simulados.</div>
-        <div class="pcard-price">
-          <div class="pcard-price-pre">6x de</div>
-          <div class="pcard-price-val">R$ 923,77</div>
-          <div class="pcard-price-period">sem juros</div>
-        </div>
         <ul class="pcard-feats">
           <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>+70 aulas gravadas online</li>
           <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>3 aulas ao vivo por semana</li>
           <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Banco de questões comentadas</li>
           <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>4 simulados online com gabarito</li>
         </ul>
+        <div class="pcard-price">
+          <div class="pcard-price-pre">6x de</div>
+          <div class="pcard-price-val">R$ 923,77</div>
+          <div class="pcard-price-period">sem juros</div>
+        </div>
         <a href="#" class="btn btn-outline-y">Garantir minha vaga</a>
       </div>
 
